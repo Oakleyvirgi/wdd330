@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>WDD 330 Course Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment portal for Brother Jason Blazzard in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+  <link rel="stylesheet" href="/Blog/main.css">
+</head>
+
+<body>
+  <header>
+    <h1>Week 02 - Notes</h1>
+
+  </header>
+  <main>
+    <p>
+      The following words are reserved for use by the JavaScript language and cannot be used to name variables (or function parameters and object properties that
+appear in later chapters):<br>
+abstract, await, boolean, break, byte, case, catch, char,<br>
+class, const, continue, debugger, default, delete, do,<br>
+double, else, enum, export, extends, false, final, finally,<br>
+float, for, function, goto, if, implements, import, in,<br>
+instanceof, int, interface, let, long, native, new, null,<br>
+package, private, protected, public, return, short, static,<br>
+super, switch, synchronized, this, throw, throws, transient,<br>
+true, try, typeof, var, volatile, void, while, with, yield<br>
+  </p>
+  <p>
+    There are also a few words not reserved but really should have been, as they are an
+    important part of the language:<br>
+    undefined, NaN, Infinity
+  </p>
+  <p>The backslash is used to escape special characters in strings such as:<br>
+    Single quote marks \'<br>
+    Double quote marks \"<br>
+    End of line \n<br>
+    Carriage return \r<br>
+    Tab \t<br>
+  </p>
+  <p>
+    Numbers also have some built-in methods, although you need to be careful when using the dot notation with number literals that are integers because JavaScript
+will confuse the dot with a decimal point. Don’t worry though, there are a few ways to deal with this, which we’ll demonstrate with the toExponential()
+method; this returns the number as a string in exponential notation. Use two dots:<br>
+5..toExponential();
+>> "5e+0"
+  </p>
+    <p>You can also calculate the remainder of a division using the % operator:<br>
+      23%6; // the same as asking "what is the remainder when 13<br>
+      ➥ is divided by 6"
+      << 5
+  </p>
+  <p>
+      The functions above look fairly similar but have their differences. I understood the first one easily
+      because it was the first one I learned. The second one helps me to understand the third. For the second
+      and thrid forms of the functions, you do not call the function itself, rather you call the const assigned
+      to the function. The ones that make the most sense to me are the first and the third. I do not understand
+      why you would name a function if you wont be referencing that name later on.
+  </p>
+  <p>
+    The toPrecision() method rounds a number to a fixed number of significant 58 JavaScript: Novice to Ninja, 2nd Edition figures that is once again returned as a string (and often using exponential
+    notation):<br>
+    325678..toPrecision(2);<br>
+    << "3.3e+5"<br>
+    2.459.toPrecision(2);<br>
+    << "2.5"<br>
+  </p>
+  <p>
+    ! (Logical NOT)<br>
+    Placing the ! operator in front of a value will convert it to a Boolean and return the opposite value. So truthy values will return false, and falsy values will
+    return true. This is known as negation:<br>
+    !true; // negating true returns false<br>
+    << false<br>
+    !0; // 0 is falsy, so negating it returns true<br>
+    << true<br>
+    </p>
+    <p>double negation (!!) to find out if a value is truthy or falsy (it is a shortcut to using the Boolean function we employed earlier because you are
+      effectively negating the negation):<br>
+      !!'';<br>
+      << false<br>
+      !!"hello";<br>
+      << true
+    </p>
+    <p>The hard, or strict, equality operator, ===, tests for equality but only returns true if and only if they are of the same data type:<br>
+      answer === 5;<br>
+      Programming Basics 79<< true<br>
+      answer === '5';<br>
+      << false<br>
+      null === undefined;<br>
+      << false<br>
+      </p>
+  </main>
+  <footer>
+    <p>&copy;2021 | Virgithmar Oakley | North Carolina |<a href="https://www.byui.edu/online">BYU-I Online
+        Learning</a><br>
+  </footer>
+</body>
+
+</html>

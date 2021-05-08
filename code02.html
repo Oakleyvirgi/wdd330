@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Group 2 - WDD 330 Team Activity: Web Frontend Development II at Brigham Young University-Idaho">
+        <title>Group 2 - WDD 330 Team Activity</title>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather%7cOpen+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Group 2 - WDD 330 Team Activity</h1>
+        </header>
+
+ 
+
+        <main>
+            <input type="number" id="input1" value="0">
+            <br>
+            <input type="number" id="input2" value="0">
+            
+            <button onclick="addAll()">&Sigma;</button>
+            <button onclick="addXY()">+</button>
+            <button onclick="subtractXY()">-</button>
+            
+            <div id="result"></div>
+            <div id="addNew"></div>
+            <div id="subtractNew"></div>
+            
+            <script>
+                const getInput = function(inputName) {
+                    const variable = parseInt(document.getElementById(inputName).value);
+                    return variable;
+                    }
+                    
+                function addAll() {
+                    //const x = parseInt(document.getElementById("input1").value);
+                    const x = getInput("input1");
+                    let total = 0;
+                    for(i = 1; i <= x; i++){
+                        total += i;
+                        console.log(total);
+                    }
+                    document.getElementById("result").innerHTML = total;
+                }
+                const addXY = () => {
+                    const x = getInput("input1");
+                    const y = getInput("input2");
+                    
+                    document.getElementById("result").innerHTML = x + y;
+                }
+                /*function addXY() {
+                    const x = parseInt(document.getElementById("input1").value);
+                    const y = parseInt(document.getElementById("input2").value);
+                    
+                    document.getElementById("result").innerHTML = x + y;
+                }*/
+                const subtractXY = function() {
+                    const x = getInput("input1");
+                    const y = getInput("input2");
+                    
+                    document.getElementById("result").innerHTML = x - y;
+                }
+            </script>
+        </main>
+
+ 
+
+        <footer>
+            <p>&copy; 2021 - Group 2 - WDD 330 Team Activity - <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer> 
+    </body>
+</html>

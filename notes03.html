@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>WDD 330 Course Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment portal for Brother Jason Blazzard in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+  <link rel="stylesheet" href="/Blog/main.css">
+</head>
+
+<body>
+  <header>
+    <h1>Week 03 - Notes</h1>
+
+  </header>
+  <main>
+    <p>
+        A function that is a property of an object is called its method.
+        </p>
+    <p>
+        One quick fix is to create a variable that stores the reference to the this. This variable is often called self or that.<br>
+
+const o = {<br>
+  doSomethingLater () {<br>
+    const self = this<br>
+    setTimeout(function() {<br>
+      self.speakLeet()<br>
+    }, 1000)<br>
+  },<br>
+  speakLeet() {<br>
+    console.log(`1337 15 4W350M3`)<br>
+  }<br>
+}<br>
+    </p>
+    <p>
+        In a method, this refers to the owner object.<br>
+Alone, this refers to the global object.<br>
+In a function, this refers to the global object.<br>
+In a function, in strict mode, this is undefined.<br>
+In an event, this refers to the element that received the event.<br>
+Methods like call(), and apply() can refer this to any object.<br>
+In strict mode, when used alone, this also refers to the Global object [object Window]:<br>
+In a JavaScript function, the owner of the function is the default binding for this.<br>
+So, in a function, this refers to the Global object [object Window].<br>
+Example<br>
+function myFunction() {<br>
+  return this;<br>
+  <p>
+    To call an object’s method we can also use dot or bracket notation. Calling a method is the same as invoking a function, so parentheses need to be placed after the method name:<br>
+    Example:<br>
+    superman.fly()<br>
+    << 'Up, up and away!'<br>
+    superman['fly']()<br>
+    << 'Up, up and away!'<br>
+    </p>
+    <h3>Checking if Properties or Methods Exist</h3>
+        <p></p>The in operator can be used to check whether an object has a particular property. So, for example, we can check if the superman object has a property called city using this code:<br>
+        
+        'city' in superman;<br>
+        << false<br>
+        Alternatively, you could also check to see if the property or method doesn’t return undefined :<br>
+        
+        superman.city !== undefined;<br>
+        << false<br>
+        Another way is to use the hasOwnProperty() method. As mentioned earlier, objects can inherit properties from other objects, so all objects have a method called hasOwnProperty()<br>
+    </p>
+    <p>
+        The Object.keys() method will return an array of all the keys of any object that is provided as an argument. We can then iterate over this array to access all the keys of an object:<br>
+
+for(const key of Object.keys(superman)) {<br>
+    console.log(key);<br>
+}
+<<  name<br>
+    real name<br>
+    height<br>
+    weight<br>
+    hero<br>
+    villain<br>
+    allies<br>
+    fly<br>
+    </p>
+    <p>
+        the Object.values() that works in the same way, but returns an array of all the object's value:<br>
+
+for(const value of Object.values(superman)) {<br>
+    console.log(value);<br>
+}
+<<  Superman<br>
+    Clark Kent<br>
+    75<br>
+    235<br>
+    true<br>
+    false<br>
+    [ 'Batman','Supergirl','Superboy' ]<br>
+    [Function: fly]<br>
+    </p>
+    <p>
+        Object.entries() is also part of ES2017 and returns an array of key-value pairs. These key-value pairs are returned in arrays, but they can be destructured and accessed individually using the following notation:<br>
+
+        for(const [key,value] of Object.entries(superman)) {<br>
+            console.log(`${key}: ${value}`);<br>
+        }<br>
+        <<  name: Superman<br>
+            real name: Clark Kent<br>
+            height: 75<br>
+            weight: 235<br>
+            hero: true<br>
+            villain: false<br>
+            allies: [ 'Batman','Supergirl','Superboy' ]<br>
+            fly: [Function: fly]<br>
+    </p>
+    <p>
+        Any property can be removed from an object using the delete operator. For example, if we wanted to remove the fly method from the superman object, we would enter the following:<br>
+
+delete superman.fly<br>
+<< true<br>
+    </p>
+    <p>
+        greet({ greeting: `What's up dude`, age: 10, name: `Bart` });<br>
+<< 'What\'s up dude! My name is Bart and I am 10 years old.'<br>
+    </p>
+    <p>
+        A dice has 6 sides by default.<br>
+        If we want to change the number of sides, all we need to do is modify the sides property:<br>
+        dice.sides = 20;<br>
+<< 20<br>
+Now the roll() method will return a random number between 1 and 20 instead, without us having to modify it:<br>
+
+dice.roll();<br>
+<< 12<br>
+dice.roll();<br>
+<< 18<br>
+    </p>
+  </main>
+  <footer>
+    <p>&copy;2021 | Virgithmar Oakley | North Carolina |<a href="https://www.byui.edu/online">BYU-I Online
+        Learning</a><br>
+  </footer>
+</body>
+
+</html>
