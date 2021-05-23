@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>Week 4 | Notes</title>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment portal for Brother Jason Blazzard in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header>
+    <h1>Week 05 - Notes</h1>
+
+  </header>
+  <main>
+    <p>
+        There are a few important points about modules that are worth keeping in mind:<br>
+
+All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this.<br>
+A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module.<br>
+The value of this in the top level of a module is undefined , rather than the global object.<br>
+You can't use HTML-style comments in modules (although this isn't very common in any JavaScript program these days).</p>
+<p>
+    Default exportsrefer toa singlevariable, function or class in a module that can be imported without having to be explicitly named. The syntax for default exports is purposely easier to read because this is how modules were designed to be used.<br>
+
+The following example demonstrates how this would be done for a variable:<br>
+
+const PI = 3.145926;<br>
+export default PI;<br>
+</p>
+<p>
+    The alias that is assigned to the imported module does not have to match its name in the actual module. For example, you could import the square function in the following way:<br>
+
+    import sq from './square.js';<br>
+    The function would then be called using sq() rather than square() :<br>
+    
+    sq(8)<br>
+    << 64 <br>
+</p>
+<p>
+    The npm init command is used when you start a project.
+</p>
+<p>
+    To install a package locally, the install command is used. Adding the --save flag will ensure the package.json file is updated with the relevant information about the package.<br>
+
+For example, if we wanted to install the Lodash library we met in Chapter 11, we'd use the following command, from inside our project directory:<br>
+
+npm install --save lodash<br>
+</p>
+<p>
+    To create a package.json file inside a directory by running the npm init command. This will ask you some questions that will be used to populate the file. If you don't want to go through the process of answering all the questions, you can use the --yes or -y flag to bypass the questions and use the default options:<br>
+
+npm install --yes<br>
+To uninstall a package  use npm to uninstall command:<br>
+
+npm uninstall lodash<br>
+</p>
+<p>
+    Files can be compressed on the server using the gzip compression tool.
+</p>
+        
+  </main>
+  <footer>
+    <p>&copy;2021 | Virgithmar Oakley | North Carolina |<a href="https://www.byui.edu/online">BYU-I Online
+        Learning</a><br>
+  </footer>
+</body>
+
+</html>
