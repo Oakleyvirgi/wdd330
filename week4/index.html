@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial - Forms</title>
+    <script defer src ="script.js"></script>
+</head>
+<body>
+    <div id="error"></div>
+   <form id="form" action="/" method="GET">
+    <div>
+        <label for="userName">User Name</label>
+        <input id="userName" name="userName" type="type" required>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required>
+    </div>
+    <div>
+        <label for="matchingPassword">Matching Password</label>
+        <input id="matchingPassword" name="matchingPassword" type="password" required>
+    </div>
+    <button type="submit">Submit</button>
+    </form> 
+    <h3>Type="submit" Vs Type= "button"</h3>
+    <p>The difference between the button type submit and the button type button is that the first has a default behavior that submits the form data to the server versus the second one which does not have a default behavior. The type button can have a client oriented script related to the element's event, of which are prompted when the event occurs.  </p>
+
+</body>
+</html>
