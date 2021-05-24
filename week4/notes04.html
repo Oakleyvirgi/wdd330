@@ -16,29 +16,33 @@
 
   </header>
   <main>
+      <h4>searchInput</h4>
     <p>
         The action attribute is the URL that the form will be submitted to so it can be processed on the server side. The input field also has a name attribute of searchInput that is used to access the information inside it. 
     </p><br>
+    <h4>form.reset()</h4>
     <p>
         The form.reset() method will reset all the form controls back to their initial values specified in the HTML.
     </p><br>
+    <h4>textarea</h4>
     <p>
-    textarea elements for longer text entry
+    textarea elements for longer text entry.
     </p><br>
+    <h4>Placeholder</h4>
     <p>
         The placeholder attribute will insert the value provided in the input field until the user enters some text. This can be useful to place hints about how to fill in the form.<br>
 
         The maxlength attribute will limit the number of characters that can be entered in the field to the value given (in this case 32).   
     </p><br>
+    <h4>filter()</h4>
     <p>
-        This then allows us to use the filter() method that returns an array containing only the check boxes that were checked (this is because their 'checked' property will be truthy). We then chain the map() method to the end, which replaces each checkbox in the array with its 'value' property.   
+        The filter() method that returns an array containing only the check boxes that were checked (this is because their 'checked' property will be truthy). We then chain the map() method to the end, which replaces each checkbox in the array with its 'value' property.   
     </p><br>
+    <h4>view.setup()</h4>
     <p>
         The first helper function is view.setup() , which will be used to set up the view when the game starts.
     </p><br>
-    <p>
-        The keyword this is used to represent the object that will be returned by the constructor function.
-    </p><br>
+    <h4>Built-in constructor</h4>
     <p>
         JavaScript contains a number of built-in constructor functions such as Object , Array , and Function that can be used to create objects, arrays and functions instead of literals.<br>
 
@@ -48,7 +52,7 @@ const literalObject = {};<br>
  {}
     </p><br>
     <p>
-        The static keyword can be used in class declarations to create a static method. These are sometimes called class methods in other programming languages. A static method is called by the class directly rather than by instances of the class.<br>
+    The static keyword can be used in class declarations to create a static method. These are sometimes called class methods in other programming languages. A static method is called by the class directly rather than by instances of the class.<br>
 
 For example, the Dice class could have a method<br>
 
@@ -64,12 +68,15 @@ class Dice {<br>
     }<br>
 }
     </p><br>
+    <h4>Prototype object</h4>
     <p>
         The prototype object is live, so if a new property or method is added to the prototype, any instances of its class will inherit the new properties and methods automatically, even if that instance has already been created. 
     </p><br>
+    <h4>toString()</h4>
     <p>
         The toString() method is used by a number of built-in functions in the background.
     </p><br>
+    <h4>mixin()</h4>
     <p>
         Another use of the mixin() function is to create a copy() method that can be used to make an exact, deep copy of an object:<br>
 
@@ -79,8 +86,9 @@ function copy(target) {<br>
     return object;<br>
 }
     </p><br>
+
     <p>
-        A common solution is to set the variable that to equal this beforethe nested function, and refer to that in the nested function instead of this . Here is the example again, using that :<br>
+        A common solution is to set the variable that to equal this before the nested function, and refer to that in the nested function instead of this . Here is the example again, using that :<br>
 
 superman.findFriends = function(){<br>
     const that = this;<br>
