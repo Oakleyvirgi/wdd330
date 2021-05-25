@@ -111,7 +111,7 @@ const updatePersistentData = (listArray) => {
 };
 
 const clearItemEntryField = () => {
-    document.getElementById("newItem").value= "";
+    document.getElementById("newItem").value = "";
 };
 
 const setFocusOnItemEntry = () => {

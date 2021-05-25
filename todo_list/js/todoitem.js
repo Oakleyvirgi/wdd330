@@ -1,5 +1,5 @@
-export default class TODOItem {
-    constructor(){
+export default class ToDoItem {
+    constructor() {
         this._id = null;
         this._item = null;
     }
@@ -8,7 +8,7 @@ export default class TODOItem {
         return this._id;
     }
 
-    setId() {
+    setId(id) {
         this._id = id;
     }
 
