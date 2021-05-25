@@ -1,13 +1,13 @@
-export default class TODOList {
-    constructor(){
+export default class ToDoList {
+    constructor() {
         this._list =[];
     }
 
-    getList(){
+    getList() {
         return this._list;
     }
 
-    clearList(){
+    clearList() {
         this._list = [];
     }
 
