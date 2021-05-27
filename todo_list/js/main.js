@@ -41,7 +41,7 @@ const loadListObject = () => {
     if (typeof storedList !== "string") return;
     const parsedList = JSON.parse(storedList);
     parsedList.forEach(itemObj => {
-        const newToDoItem = createNewItem(itemObj._id, itemObj._item)
+        const newToDoItem = createNewItem(itemObj._id, itemObj._item, itemObj._check)
         toDoList.addItemToList(newToDoItem);
     });
 };
@@ -68,10 +68,13 @@ const deleteContents = (parentElement) => {
 
 const renderList = () => {
     const list = toDoList.getList();
+    const newRender = 
+    
     list.forEach((item) => {
         buildListItem(item);
     });
 };
+
 
 const buildListItem = (item) => {
     const div = document.createElement("div");
@@ -92,13 +95,14 @@ const buildListItem = (item) => {
 
 const addClickListenerToCheckbox = (checkbox) => {
     checkbox.addEventListener("click", (event) => {
-        toDoList.removeItemFromList(checkbox.id);
+        //toDoList.removeItemFromList(checkbox.id);
+        toDoList.checkToDo(checkbox.id);
         updatePersistentData(toDoList.getList());
-        const removedText = getLabelText(checkbox.id);
+       // const removedText = getLabelText(checkbox.id);
         //updateScreenReaderConfirmation(removedText, "removed from list");
-        setTimeout(() => {
-            refreshThePage();
-        }, 1000);
+        //setTimeout(() => {
+            //refreshThePage();
+        //}, 1000);
     });
 };
 
@@ -149,6 +153,41 @@ const createNewItem = (itemId, itemText) => {
     return toDo;
 };
 
+
+
 /*const updateScreenReaderConfirmation = (newEntryText, actionVerb) => {
     document.getElementById("confirmation").textContent = `${newEntryText} ${actionVerb}.`;
 };*/
+
+//working on filter
+const all = document.getElementById("all");
+
+const left = document.getElementById("left");
+
+const active = document.getElementById("active");
+
+const completed = document.getElementById("completed");
+
+all.addEventListener("click", (toDoItem) => {
+    if ((this._check = false) || (this._check = true))
+     return toDoItem;
+});
+
+left.addEventListener("click", (toDoItem) => {
+    if (this._check = false)
+     return toDoItem;
+        ///alert("2");
+});
+
+active.addEventListener("click", (toDoItem) => {
+    if (this._check = false)
+     return toDoItem;
+    //alert("3");
+});
+
+completed.addEventListener("click", (toDoItem) => {
+    if (this._check = true)
+     return toDoItem;
+    //alert("4");
+});
+

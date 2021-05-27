@@ -24,7 +24,7 @@
             <div class="listTitle">
                 <h1 tabindex="0">To Do List</h1>
                 <button id="clearItems" class="button" title="Clear the list"
-                    aria-label="Remove all items from the list" tabindex="0">Clear</button>
+                    aria-label="Remove all items from the list" tabindex="0">Clear All</button>
             </div>
                 <hr />
                 <div id="listItems">
@@ -38,6 +38,14 @@
                     </div>
                     <p id="confirmation" class="confirmation" aria-live="assertive"></p>
                 </div>
+        </section>
+        <section class="Filter">
+            <div id="myBtnContainer">
+                <button class="btn" id="all"> Show all</button>
+                <button class="btn" id="left"> Tasks left</button>
+                <button class="btn" id="active"> Active</button>
+                <button class="btn" id="completed"> Completed</button>
+            </div>
         </section>
     </main>
 </body>
