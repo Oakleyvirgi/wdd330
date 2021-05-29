@@ -4,7 +4,7 @@ import ToDoItem from "./todoitem.js";
 const toDoList = new ToDoList();
 
 //Launch app
-document.addEventListener("readystatechange", (event) =>{
+document.addEventListener("readystatechange", (event) => {
     if (event.target.readyState === "complete") {
         initApp();
     }
@@ -12,24 +12,24 @@ document.addEventListener("readystatechange", (event) =>{
 
 const initApp = () => {
     //Add listeners
-    const  itemEntryForm = document.getElementById("itemEntryForm");
+    const itemEntryForm = document.getElementById("itemEntryForm");
     itemEntryForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            processSubmission();
+        event.preventDefault();
+        processSubmission();
     });
 
-     const clearItems = document.getElementById("clearItems");
-     clearItems.addEventListener("click", (event) => {
-         const list = toDoList.getList();
-         if (list.length){
-             const confirmed = confirm("Are you sure you want to clear the entire list?");
-             if (confirmed) {
-                 toDoList.clearList();
-                 updatePersistentData(toDoList.getList());
-                 refreshThePage();
-             }
-         }
-     });
+    const clearItems = document.getElementById("clearItems");
+    clearItems.addEventListener("click", (event) => {
+        const list = toDoList.getList();
+        if (list.length) {
+            const confirmed = confirm("Are you sure you want to clear the entire list?");
+            if (confirmed) {
+                toDoList.clearList();
+                updatePersistentData(toDoList.getList());
+                refreshThePage();
+            }
+        }
+    });
 
     // Procedural
     loadListObject();
@@ -53,7 +53,7 @@ const refreshThePage = () => {
     setFocusOnItemEntry();
 };
 
-const clearListDisplay =  () => {
+const clearListDisplay = () => {
     const parentElement = document.getElementById("listItems");
     deleteContents(parentElement);
 };
@@ -72,16 +72,26 @@ const renderList = (filter = 'all') => {
     //If the filter is active, filter check = false
     //If the filter is completed, filter check = true
     let newRender = [];
-    if (filter === 'active') {
-        newRender = list.filter((item) => ); //filter
-        console.log(list);
-    } else if (filter === 'left'){
-        //one more filter
-    } else {
-        console.newRender = list;
+    if (filter === "all") {
+        newRender = list;
+    } 
+    else if (filter === 'active'){
+        console.log("active");
+        newRender = list.filter((item) =>  !item._check) ;
+    }
+    else if (filter === "complete") {
+        console.log("complete");
+        newRender = list.filter((item) => (item._check));
     }
     
-    
+    //if (filter === 'active') {
+    //newRender = list.filter((item) => ); //filter
+    //console.log(list);    } //else if (filter === 'left'){
+    //one more filter    } //else {
+    //console.newRender = list;    }
+
+    const container = document.getElementById("listItems");
+    container.innerHTML = "";
     newRender.forEach((item) => {
         buildListItem(item);
     });
@@ -93,6 +103,7 @@ const buildListItem = (item) => {
     div.className = "item";
     const check = document.createElement("input");
     check.type = "checkbox";
+    check.checked = item.getCheck();
     check.id = item.getId();
     check.tabIndex = 0;
     addClickListenerToCheckbox(check);
@@ -102,6 +113,7 @@ const buildListItem = (item) => {
     div.appendChild(check);
     div.appendChild(label);
     const container = document.getElementById("listItems");
+    //container.innerHTML = "";
     container.appendChild(div);
 };
 
@@ -110,10 +122,10 @@ const addClickListenerToCheckbox = (checkbox) => {
         //toDoList.removeItemFromList(checkbox.id);
         toDoList.checkToDo(checkbox.id);
         updatePersistentData(toDoList.getList());
-       // const removedText = getLabelText(checkbox.id);
+        // const removedText = getLabelText(checkbox.id);
         //updateScreenReaderConfirmation(removedText, "removed from list");
         //setTimeout(() => {
-            //refreshThePage();
+        //refreshThePage();
         //}, 1000);
     });
 };
@@ -153,7 +165,7 @@ const calcNextItemId = () => {
     let nextItemId = 1;
     const list = toDoList.getList();
     if (list.length > 0) {
-        nextItemId = list[list.length -1].getId() +1;
+        nextItemId = list[list.length - 1].getId() + 1;
     }
     return nextItemId;
 };
@@ -180,19 +192,23 @@ const active = document.getElementById("active");
 
 const completed = document.getElementById("completed");
 
-all.addEventListener("click", (toDoItem) => {
+all.addEventListener("click", () => {
     //Call render function and send a parameter
+    renderList('all');
     //Telling the render function, what to render
 });
 
-left.addEventListener("click", (toDoItem) => {
+active.addEventListener("click", () => {
+    console.log("click");
     //Call render function and send a parameter
+    renderList('active');
     //Telling the render function, what to render
 });
 
 
-completed.addEventListener("click", (toDoItem) => {
+completed.addEventListener("click", () => {
     //Call render function and send a parameter
+    renderList('complete');
     //Telling the render function, what to render
 });
 
