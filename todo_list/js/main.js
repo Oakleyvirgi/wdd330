@@ -66,11 +66,23 @@ const deleteContents = (parentElement) => {
     }
 };
 
-const renderList = () => {
+const renderList = (filter = 'all') => {
     const list = toDoList.getList();
-    const newRender = 
+    //If filter is all, no filter is done
+    //If the filter is active, filter check = false
+    //If the filter is completed, filter check = true
+    let newRender = [];
+    if (filter === 'active') {
+        newRender = list.filter((item) => ); //filter
+        console.log(list);
+    } else if (filter === 'left'){
+        //one more filter
+    } else {
+        console.newRender = list;
+    }
     
-    list.forEach((item) => {
+    
+    newRender.forEach((item) => {
         buildListItem(item);
     });
 };
@@ -169,25 +181,24 @@ const active = document.getElementById("active");
 const completed = document.getElementById("completed");
 
 all.addEventListener("click", (toDoItem) => {
-    if ((this._check = false) || (this._check = true))
-     return toDoItem;
+    //Call render function and send a parameter
+    //Telling the render function, what to render
 });
 
 left.addEventListener("click", (toDoItem) => {
-    if (this._check = false)
-     return toDoItem;
-        ///alert("2");
+    //Call render function and send a parameter
+    //Telling the render function, what to render
 });
 
-active.addEventListener("click", (toDoItem) => {
-    if (this._check = false)
-     return toDoItem;
-    //alert("3");
-});
 
 completed.addEventListener("click", (toDoItem) => {
-    if (this._check = true)
-     return toDoItem;
-    //alert("4");
+    //Call render function and send a parameter
+    //Telling the render function, what to render
 });
 
+/*filterList (all, left, active, completed); {
+    toDoList.filter(filterCallback)
+    .foreach(filterTodo =>
+        appendChild(filterTodo, ToDoList))
+};
+*/
