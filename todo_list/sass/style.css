@@ -21,7 +21,7 @@ html, body {
 
 body {
   padding: 20px;
-  background-color: #4e90e2;
+  background-color: #6c7586;
 }
 
 section {
@@ -107,6 +107,7 @@ section {
 .listContainer {
   min-height: 60vh;
   padding: 0.75rem;
+  margin-bottom: 12px;
 }
 
 .listContainer .listTitle {
@@ -172,5 +173,52 @@ section {
 .listContainer .confirmation {
   position: absolute;
   left: -10000px;
+}
+
+.myBtnContainer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.myBtnContainer label {
+  position: absolute;
+  left: -10000px;
+}
+
+.myBtnContainer input[type="text"] {
+  width: 80%;
+  font-size: 1.25rem;
+  border: 2 px solid lightgray;
+  border-radius: 10px;
+  padding: 0.75rem;
+  outline: none;
+}
+
+.myBtnContainer input[type="text"]:focus,
+.myBtnContainer input[type="text"]:hover {
+  -webkit-box-shadow: 4px 2px 5px #000;
+          box-shadow: 4px 2px 5px #000;
+}
+
+.myBtnContainer button {
+  font-size: 1.25rem;
+  background-color: #88b2bcab;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .myBtnContainer button {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

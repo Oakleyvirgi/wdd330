@@ -212,9 +212,3 @@ completed.addEventListener("click", () => {
     //Telling the render function, what to render
 });
 
-/*filterList (all, left, active, completed); {
-    toDoList.filter(filterCallback)
-    .foreach(filterTodo =>
-        appendChild(filterTodo, ToDoList))
-};
-*/
