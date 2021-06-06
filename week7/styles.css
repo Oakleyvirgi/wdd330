@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h1 {
+    padding: 15px;
+    background-color: #e6e6e6;
+    color: #4d4d4d;
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  h2 {
+    padding: 5px;
+    background-color: #e6e6ff;
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  ul {
+    list-style: none;
+    padding-inline-start: 0px;
+  }
+  
+  li {
+    text-decoration: none;
+  }
+  
+  .hikeListItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .data {
+    margin-left: 20px;
+  }
+  
+  .data :nth-child(1) :nth-child(1) {
+    margin-top: 0px;
+  }
+  
+  .image {
+    padding-left: 15px;
+  }
+  
+  .back {
+    margin: 0 auto;
+    background-color: #ff6347;
+    color: #330066;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    width: 8%;
+  }
+  
+  a {
+    text-decoration: none;
+  }
