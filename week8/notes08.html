@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>Week 7 | Notes</title>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment portal for Brother Jason Blazzard in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Week 07 - Notes</title>
+  
+</head>
+
+<body>
+  <header>
+    <h1>Week 07 - Notes</h1>
+
+  </header>
+  <main>
+    <h4>Cross-Origin Resource Sharing (CORS)</h4>
+    <p>
+        is an HTTP-header based mechanism that allows a server to indicate any other origins (domain, scheme, or port) than its own from which a browser should permit loading of resources.</p>
+<h4>Functional overview</h4>
+<p>CORS failures result in errors, but for security reasons, specifics about the error are not available to JavaScript. All the code knows is that an error occurred. The only way to determine what specifically went wrong is to look at the browser's console for details.</p>
+<h4>HEAD</h4>
+<p>HTTP HEAD method requests the headers that would be returned if the HEAD request's URL was instead requested with the HTTP GET method.</p>
+<h4>Requests with credentials</h4>
+<p>When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced independent of any setup on the server and the client.</p>
+<h4>Credentialed requests and wildcards</h4>
+<p>When responding to a credentialed request, the server must specify an origin in the value of the Access-Control-Allow-Origin header, instead of specifying the "*" wildcard.<br>
+</p>
+<h4>Third-party cookies</h4>
+<p>cookies set in CORS responses are subject to normal third-party cookie policies<br>
+</p>
+<h4>Access-Control-Allow-Origin</h4>
+<p>
+    Access-Control-Allow-Origin specifies either a single origin, which tells browsers to allow that origin to access the resource; or else — for requests without credentials — the "*" wildcard, to tell browsers to allow any origin to access the resource.<br>
+</p>
+<p>For example, to allow code from the origin https://mozilla.org to access the resource, you can specify:</p>
+<p>Access-Control-Allow-Origin: https://mozilla.org<br>
+    Vary: Origin</p>
+    <h4>Access-Control-Expose-Headers</h4>
+    <p>The Access-Control-Expose-Headers header lets a server whitelist headers that Javascript (such as getResponseHeader()) in browsers are allowed to access.<br>
+    </p>
+    <p>Access-Control-Expose-Headers: <header-name>[, <header-name>]*</p>
+    <p>For example, the following:<br>
+    Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header</p>    
+    <h4>Access-Control-Max-Age</h4>    
+    <p>The Access-Control-Max-Age header indicates how long the results of a preflight request can be cached. For an example of a preflight request, see the above examples.<br>
+
+        Access-Control-Max-Age: <delta-seconds><br>
+        The delta-seconds parameter indicates the number of seconds the results can be cached.</p>
+        <h4>Origin</h4>
+        <p>The Origin header indicates the origin of the cross-site access request or preflight request.<br>
+
+            Origin: <origin><br>
+            The origin is a URL indicating the server from which the request initiated. It does not include any path information, but only the server name.</p>
+
+  </main>
+  <footer>
+    <p>&copy;2021 | Virgithmar Oakley | North Carolina |<a href="https://www.byui.edu/online">BYU-I Online
+        Learning</a><br>
+  </footer>
+</body>
+
+</html>
