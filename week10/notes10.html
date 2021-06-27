@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <title>Week 9 | Notes</title>
+    <title>Week 10 | Notes</title>
     <meta charset="utf-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1">
     <meta name="description"
@@ -14,73 +14,63 @@
 
 <body>
     <header>
-        <h1>Week 09 - Notes</h1>
+        <h1>Week 10 - Notes</h1>
 
     </header>
     <main>
-        <h4>window.confirm()</h4>
-        <p>The window.confirm() method will stop the execution of the program and display a confirmation dialog that
-            shows the message provided as an argument, and giving the options of OK or Cancel. It returns the boolean
-            values of true if the user clicks OK, and false if the user clicks Cancel:<br>
-            window.confirm('Do you wish to continue?');<br>
-            << undefined <br>
+        <h4>pattern</h4>
+        <p>Specifies a regular expression that defines a pattern the entered data needs to follow. <br>
         </p>
-        <h4>window.prompt()</h4>
-        <p>method will stop the execution of the program. It displays a dialog that shows a message provided as an
-            argument, as well as an input field that allows the user to enter text. This text is then returned as a
-            string when the user clicks OK. If the user clicks Cancel, null is returned:<br>
-            window.prompt('Please enter your name:');</p>
-        <h4>window.location</h4>
-        <p>The window.location property is an object that contains information about the URL of the current page. It
-            contains a number of properties that provide information about different fragments of the URL.<br>
-            The href property returns the full URL as a string:<br>
+        <h4>willValidate</h4>
+        <p>Returns true if the element will be validated when the form is submitted; false otherwise.</p>
+        <h4>checkValidity()</h4>
+        <p>Returns true if the element's value has no validity problems; false otherwise. If the element is invalid,
+            this method also fires an invalid event on the element.</p>
+        <h4>setCustomValidity(message)</h4>
+        <p>Adds a custom error message to the element; if you set a custom error message, the element is considered to
+            be invalid, and the specified error is displayed. This lets you use JavaScript code to establish a
+            validation failure other than those offered by the standard HTML5 validation constraints. The message is
+            shown to the user when reporting the problem.</p>
+        <h4>validity.typeMismatch</h4>
+        <p>Returns true, meaning that the contained value doesn't match the pattern for a well-formed email address. If
+            so, we call the setCustomValidity() method with a custom message. This renders the input invalid, so that
+            when you try to submit the form, submission fails and the custom error message is displayed.</p>
+        <h4>Request()</h4>
+        <p>accepts exactly the same parameters as the fetch() method. You can even pass in an existing request object to
+            create a copy of it:</br>
 
-            window.location.href <br>
-            << "https://www.sitepoint.com/premium/books/javascript-novice-to-ninja" </p> <h4>reload()</h4>
-                <p>The reload() method can be used to force a reload of the current page. If it’s given a parameter of
-                    true , it will force the browser to reload the page from the server, instead of using a cached page.
-                </p>
-                <h4>assign()</h4>
-                <p>The assign() method can be used to load another resource from a URL provided as a parameter, for
-                    example:<br>
-                    window.location.assign('https://www.sitepoint.com/')<br>
-                </p>
-                <h4>window.history.length</h4>
-                <p>The window.history.length property shows how many pages have been visited before arriving at the
-                    current page.<br>
-                </p>
-                <h4>window.history.go()</h4>
-                <p>The window.history.go() method can be used to go to a specific page, where 0 is the current page:<br>
-                    window.history.go(1); // goes forward 1 page<br>
-                    window.history.go(0); // reloads the current page<br>
-                    window.history.go(-1); // goes back 1 page<br>
-                </p>
-                <h4>window.history.forward() and window.history.back()</h4>
-                <p>There are also the window.history.forward() and window.history.back() methods that can be used to
-                    navigate forwards and backwards by one page respectively, just like using the browser’s forward and
-                    back buttons.<br>
-                </p>
-                <h4>close()</h4>
-                <p>The close() method can be used to close a window, assuming you have a reference to it:<br>
-                    popup.close();</p>
-                <h4>window.screen</h4>
-                <p>The window.screen object contains information about the screen the browser is displayed on. You can
-                    find out the height and width of the screen in pixels using the height and width properties
-                    respectively:<br>
-                    window.screen.height<br>
-                    << 1024<br>
-                        window.screen.width<br>
-                        << 1280</p> <h4>availHeight and availWidth</h4>
-                            <p>The availHeight and availWidth can be used to find the height and width of the screen,
-                                excluding any operating system menus:<br>
-                                window.screen.availWidth<br>
-                                << 1280<br>
-                                    window.screen.availHeight<br>
-                                    << 995</p> </main> <footer>
-                                        <p>&copy;2021 | Virgithmar Oakley | North Carolina |<a
-                                                href="https://www.byui.edu/online">BYU-I Online
-                                                Learning</a><br>
-                                            </footer>
+            const anotherRequest = new Request(myRequest, myInit);
+        </p>
+        <h4>clone()</h4>
+        <p>Creates a copy. Both methods of creating a copy will fail if the body of the original request or response has
+            already been read, but reading the body of a cloned response or request will not cause it to be marked as
+            read in the original.
+        </p>
+        <h4>Headers</h4>
+        <p>allows you to create your own headers object via the Headers() constructor. A headers object is a simple
+            multi-map of names to values:<br>
+
+            const content = 'Hello World';<br>
+            const myHeaders = new Headers();<br>
+            myHeaders.append('Content-Type', 'text/plain');<br>
+            myHeaders.append('Content-Length', content.length.toString());<br>
+            myHeaders.append('X-Custom-Header', 'ProcessThisImmediately');<br>
+        </p>
+        <h4>Response.status</h4>
+        <p>An integer (default value 200) containing the response status code.</p>
+        <h4>Response.statusText</h4>
+        <p>A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 does not
+            support status messages.</p>
+        <h4>availHeight and availWidth</h4>
+        <p>The availHeight and availWidth can be used to find the height and width of the screen,
+        </p>
+        <h4>Response.ok</h4>
+        <p>Seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a Boolean.</p>
+    </main>
+    <footer>
+        <p>&copy;2021 | Virgithmar Oakley | North Carolina |<a href="https://www.byui.edu/online">BYU-I Online
+                Learning</a><br>
+    </footer>
 </body>
 
 </html>
