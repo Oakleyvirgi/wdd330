@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+        <title>Local Quakes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+        <main>
+            <h1 class="title">Quake List</h1>
+            <form id="radiusSettings">
+                <label>Radius
+                    <input id="newRadius" type="number" min="1" max="1000" value="100" />
+                </label>
+                <input id="submit" type="submit" value="Get updated Results" />
+            </form>
+            <ul id="quakeList"></ul>
+            <div id="quakeDetailArea"></div>
+        </main>
+        <script src="./js/index.js" type="module"></script>
+    </body>
+    
+    </html>
