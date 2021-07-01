@@ -40,11 +40,11 @@ const game = {
         alert('Correct!');
         this.score++;
         } else {
-        alert(`Wrong! The correct answer was ${answer}`);
+        alert(`Nope, The correct answer was ${answer}`);
         }
     },
     gameOver(){
-        alert(`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
+        alert(`Thanks for playing, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
     }
 }
 game.start(quiz);
