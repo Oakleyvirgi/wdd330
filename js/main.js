@@ -27,7 +27,7 @@ const links = [
     {list: ["Week10 Notes", "week10/notes10.html", "Team Assignment", "week10/index.html"],
     },
 
-    {list: ["Team Assignment", "week11/week11.html"],
+    {list: ["Week11 Team Assignment", "week11/week11.html"],
     },
   ];
   
