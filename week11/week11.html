@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Week 11 code examples" />
+    <title>Week 10</title>
+    <link rel="stylesheet" href="codecss.css" />
+</head>
+
+<body>
+    <form id="login">
+        <label><input id="username" type="email" /></label>
+        <label><input id="password" type="password" /></label>
+        <button type="submit">Log In</button>
+    </form>
+
+    <div id="content" class="hidden">
+        <form name="postForm" id="postForm">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" class="form-control" name="title" placeholder="title" required />
+            </div>
+            <div>
+                <label for="content">Content</label>
+                <input type="text" class="form-control" name="content" placeholder="content" required />
+            </div>
+            <div id="postError"></div>
+
+            <input type="submit" id="createSubmit" />
+        </form>
+        <ul id="posts"></ul>
+        <script src="client/week11.js" type="module"></script>
+</body>
+
+</html>
