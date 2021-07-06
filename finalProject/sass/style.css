@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  width: 100%;
+  min-height: 100%;
+}
+html {
+background-image: url("/finalProject/images/test2.jpg");
+background-size: 100%;
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  html {
+    background-image: url("/finalProject/images/test2.jpg");
+    background-size: 100%;
+    }
+  html, body {
+    font-size: 22px;
+  }
+}
+
+body {
+  padding: 20px;
+}
+
+section {
+  background-color: #f2f2f2ce;
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  border: .5px solid rgb(11, 51, 11);
+  border-radius: 10px;
+}
+
+.button {
+  width: 15%;
+  min-width: 48px;
+  min-height: 48px;
+  color: #fff;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  -webkit-box-shadow: 4px 2px 5px #000;
+          box-shadow: 4px 2px 5px #000;
+}
+
+.newItemEntry {
+  position: -webkit-sticky;
+  /*position: sticky;*/
+  top: 0;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+}
+
+.newItemEntry form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.newItemEntry form label {
+  position: absolute;
+  left: -10000px;
+}
+
+.newItemEntry form input[type="text"] {
+  width: 80%;
+  font-size: 1.25rem;
+  border: 2 px solid lightgray;
+  border-radius: 10px;
+  padding: 0.75rem;
+  outline: none;
+}
+
+.newItemEntry form input[type="text"]:focus,
+.newItemEntry form input[type="text"]:hover {
+  -webkit-box-shadow: 4px 2px 5px #000;
+          box-shadow: 4px 2px 5px #000;
+}
+
+.newItemEntry form button {
+  font-size: 1.25rem;
+  background-color: #2B5F2C;
+  padding: 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .newItemEntry form button {
+    font-size: 1.5rem;
+  }
+  html {
+    background-image: url("/finalProject/images/test2.jpg");
+    background-size: 100%;
+    }
+}
+
+.listContainer {
+  min-height: 60vh;
+  padding: 0.75rem;
+  margin-bottom: 12px;
+}
+
+.listContainer .listTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.listContainer .listTitle button {
+  font-size: 1rem;
+  background-color: #9f6060;
+  padding: 0 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .listContainer .listTitle button {
+    padding: 0 0.5rem;
+  }
+  html {
+    background-image: url("/finalProject/images/test2.jpg");
+    background-size: 100%;
+    }
+}
+
+.listContainer .listTitle hr {
+  width: 100%;
+}
+
+.listContainer .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
+}
+
+.listContainer .item input[type="checkbox"] {
+  text-align: center;
+  width: 2.5rem;
+  min-width: 48px;
+  height: 2.5rem;
+  min-height: 48px;
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+
+.listContainer .item input[type="checkbox"]:focus + label {
+  text-decoration: underline;
+}
+
+.listContainer .item label {
+  font-size: 1.1rem;
+}
+
+.listContainer .confirmation {
+  position: absolute;
+  left: -10000px;
+}
+
+.myBtnContainer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.myBtnContainer label {
+  position: absolute;
+  left: -10000px;
+}
+
+.myBtnContainer input[type="text"] {
+  width: 80%;
+  font-size: 1.25rem;
+  border: 2 px solid lightgray;
+  border-radius: 10px;
+  padding: 0.75rem;
+  outline: none;
+}
+
+.myBtnContainer input[type="text"]:focus,
+.myBtnContainer input[type="text"]:hover {
+  -webkit-box-shadow: 4px 2px 5px #000;
+          box-shadow: 4px 2px 5px #000;
+}
+
+.myBtnContainer button {
+  font-size: 1.25rem;
+  background-color: #9f60607c;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .myBtnContainer button {
+    font-size: 1.5rem;
+  }
+  html {
+    background-image: url("/finalProject/images/test2.jpg");
+    background-size: 100%;
+    }
+}
+/*# sourceMappingURL=style.css.map */
