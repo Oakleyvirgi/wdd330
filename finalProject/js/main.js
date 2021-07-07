@@ -1,6 +1,9 @@
 import ToDoList from './todolist.js';//"./todolist.js"
 import ToDoItem from './todoitem.js';
 
+fetch("message.json")
+  .then(response => response.json())
+  .then(json => console.log(json));
 const toDoList = new ToDoList();
 
 //Launch app
@@ -212,3 +215,23 @@ completed.addEventListener("click", () => {
     //Telling the render function, what to render
 });
 
+//Display message
+function makeYMD(d) {
+    return d.getMonth() + 1;
+  }
+  
+  //var span = document.querySelector('span.date');
+  //var spandate = new Date(span.getAttribute("data-date"));
+  var today = new Date();
+  
+  //spandate = makeYMD(spandate);
+  today = makeYMD(today);
+  console.log (message);
+  
+  //filter 
+  //if(today == ) {
+    // span.textContent = "message";
+
+       
+document.getElementById("body").addEventListener("load", makeYMD);
+ 
