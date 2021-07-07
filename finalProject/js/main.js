@@ -1,9 +1,9 @@
-import ToDoList from './todolist.js';//"./todolist.js"
+import ToDoList from './todolist.js'; //"./todolist.js"
 import ToDoItem from './todoitem.js';
 
 fetch("message.json")
-  .then(response => response.json())
-  .then(json => console.log(json));
+    .then(response => response.json())
+    .then(json => console.log(json));
 const toDoList = new ToDoList();
 
 //Launch app
@@ -77,16 +77,14 @@ const renderList = (filter = 'all') => {
     let newRender = [];
     if (filter === "all") {
         newRender = list;
-    } 
-    else if (filter === 'active'){
+    } else if (filter === 'active') {
         console.log("active");
-        newRender = list.filter((item) =>  !item._check) ;
-    }
-    else if (filter === "complete") {
+        newRender = list.filter((item) => !item._check);
+    } else if (filter === "complete") {
         console.log("complete");
         newRender = list.filter((item) => (item._check));
     }
-    
+
     //if (filter === 'active') {
     //newRender = list.filter((item) => ); //filter
     //console.log(list);    } //else if (filter === 'left'){
@@ -216,22 +214,35 @@ completed.addEventListener("click", () => {
 });
 
 //Display message
-function makeYMD(d) {
+function message(d) {
     return d.getMonth() + 1;
-  }
-  
-  //var span = document.querySelector('span.date');
-  //var spandate = new Date(span.getAttribute("data-date"));
-  var today = new Date();
-  
-  //spandate = makeYMD(spandate);
-  today = makeYMD(today);
-  console.log (message);
-  
-  //filter 
-  //if(today == ) {
-    // span.textContent = "message";
+}
 
-       
-document.getElementById("body").addEventListener("load", makeYMD);
- 
+//var span = document.querySelector('span.date');
+//var spandate = new Date(span.getAttribute("data-date"));
+var d = new Date();
+/*var month = new Array(12)
+month[0] = "January"
+month[1] = "February"
+month[2] = "March"
+month[3] = "April"
+month[4] = "May"
+month[5] = "June"
+month[6] = "July"
+month[7] = "August"
+month[8] = "September"
+month[9] = "October"
+month[10] = "November"
+month[11] = "December"*/
+
+//spandate = makeYMD(spandate);
+today = message(d);
+
+document.write("message.json" + month[today.getMonth()] + ".gif border=0>")
+
+//filter 
+//if(today == ) {
+// span.textContent = "message";
+
+
+//document.getElementById("body").addEventListener("load", makeYMD);

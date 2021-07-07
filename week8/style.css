@@ -75,6 +75,7 @@ section {
   box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
+
 @media only screen and (min-width: 35rem) {
   h1 {
     font-size: 2rem;
