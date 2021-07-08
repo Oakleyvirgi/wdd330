@@ -2,31 +2,65 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   color: #000;
   width: 100%;
   min-height: 100%;
 }
+
 html {
-background-image: url("/finalProject/images/test2.jpg");
-background-size: 100%;
+  background-image: url("/finalProject/images/test2.jpg");
+  background-size: 100%;
 
 }
+
+#scripture {
+  margin-top:5%;
+  margin-bottom:5%;
+  margin-right: 25%;
+  margin-left: 25%;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  color:#0e1a0e;
+  border-radius:2px;
+  
+}
+
+/*#scripture:hover {
+transition: transform .5s ease;
+  transform: scale(1.5);
+}*/
 
 @media only screen and (min-width: 768px) {
 
   html {
     background-image: url("/finalProject/images/test2.jpg");
     background-size: 100%;
-    }
-  html, body {
+  }
+
+  html,
+  body {
     font-size: 22px;
   }
+  /*#scripture {
+    margin-top:5%;
+    margin-bottom:5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: x-large;
+  }
+
+  #scripture:hover {
+    transition: transform .5s ease;
+      transform: scale(1.3);
+    }*/
 }
 
 body {
@@ -59,9 +93,9 @@ section {
 .button:hover,
 .button:focus {
   -webkit-filter: brightness(120%);
-          filter: brightness(120%);
+  filter: brightness(120%);
   -webkit-box-shadow: 4px 2px 5px #000;
-          box-shadow: 4px 2px 5px #000;
+  box-shadow: 4px 2px 5px #000;
 }
 
 .newItemEntry {
@@ -77,8 +111,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .newItemEntry form label {
@@ -98,7 +132,7 @@ section {
 .newItemEntry form input[type="text"]:focus,
 .newItemEntry form input[type="text"]:hover {
   -webkit-box-shadow: 4px 2px 5px #000;
-          box-shadow: 4px 2px 5px #000;
+  box-shadow: 4px 2px 5px #000;
 }
 
 .newItemEntry form button {
@@ -111,10 +145,12 @@ section {
   .newItemEntry form button {
     font-size: 1.5rem;
   }
+
   html {
     background-image: url("/finalProject/images/test2.jpg");
     background-size: 100%;
-    }
+  }
+
 }
 
 .listContainer {
@@ -128,11 +164,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .listContainer .listTitle button {
@@ -146,10 +182,11 @@ section {
   .listContainer .listTitle button {
     padding: 0 0.5rem;
   }
+
   html {
     background-image: url("/finalProject/images/test2.jpg");
     background-size: 100%;
-    }
+  }
 }
 
 .listContainer .listTitle hr {
@@ -161,11 +198,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 1rem;
 }
 
@@ -179,7 +216,7 @@ section {
   margin-right: 1.5rem;
 }
 
-.listContainer .item input[type="checkbox"]:focus + label {
+.listContainer .item input[type="checkbox"]:focus+label {
   text-decoration: underline;
 }
 
@@ -202,8 +239,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .myBtnContainer label {
@@ -223,7 +260,7 @@ section {
 .myBtnContainer input[type="text"]:focus,
 .myBtnContainer input[type="text"]:hover {
   -webkit-box-shadow: 4px 2px 5px #000;
-          box-shadow: 4px 2px 5px #000;
+  box-shadow: 4px 2px 5px #000;
 }
 
 .myBtnContainer button {
@@ -237,9 +274,24 @@ section {
   .myBtnContainer button {
     font-size: 1.5rem;
   }
+
   html {
     background-image: url("/finalProject/images/test2.jpg");
     background-size: 100%;
-    }
+  }
+  /*#scripture {
+    margin-top:5%;
+    margin-bottom:5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: large;
+  }
+
+  #scripture:hover {
+    transition: transform .5s ease;
+      transform: scale(1);
+    }*/
+
 }
+
 /*# sourceMappingURL=style.css.map */

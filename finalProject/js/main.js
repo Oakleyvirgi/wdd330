@@ -1,9 +1,8 @@
 import ToDoList from './todolist.js'; //"./todolist.js"
 import ToDoItem from './todoitem.js';
 
-fetch("message.json")
-    .then(response => response.json())
-    .then(json => console.log(json));
+const scriptures = await fetch("message.json")
+    .then(response => response.json());
 const toDoList = new ToDoList();
 
 //Launch app
@@ -213,36 +212,17 @@ completed.addEventListener("click", () => {
     //Telling the render function, what to render
 });
 
+
 //Display message
-function message(d) {
-    return d.getMonth() + 1;
-}
+const currentMonth = new Date().getMonth() + 1;
+const scripture = scriptures.message.filter (item => {
+    return currentMonth == item.id;
+})
+console.log(scripture);
 
-//var span = document.querySelector('span.date');
-//var spandate = new Date(span.getAttribute("data-date"));
-var d = new Date();
-/*var month = new Array(12)
-month[0] = "January"
-month[1] = "February"
-month[2] = "March"
-month[3] = "April"
-month[4] = "May"
-month[5] = "June"
-month[6] = "July"
-month[7] = "August"
-month[8] = "September"
-month[9] = "October"
-month[10] = "November"
-month[11] = "December"*/
+//document.getElementById("scripture").addEventListener("load", (scripture[0].reference + scripture[0].text));
 
-//spandate = makeYMD(spandate);
-today = message(d);
-
-document.write("message.json" + month[today.getMonth()] + ".gif border=0>")
-
-//filter 
-//if(today == ) {
-// span.textContent = "message";
+document.getElementById("scripture").innerHTML = scripture[0].reference +"<br><br> "+ scripture[0].text;
 
 
 //document.getElementById("body").addEventListener("load", makeYMD);
