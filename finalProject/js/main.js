@@ -84,11 +84,7 @@ const renderList = (filter = 'all') => {
         newRender = list.filter((item) => (item._check));
     }
 
-    //if (filter === 'active') {
-    //newRender = list.filter((item) => ); //filter
-    //console.log(list);    } //else if (filter === 'left'){
-    //one more filter    } //else {
-    //console.newRender = list;    }
+
 
     const container = document.getElementById("listItems");
     container.innerHTML = "";
@@ -97,6 +93,24 @@ const renderList = (filter = 'all') => {
     });
 };
 
+//Delete single item
+const deleteName = (id) => {
+
+    const inputList = toDoList.getList();
+    let resultList =inputList.filter(item =>{
+        return item.id!=id;
+
+        
+    });
+    //ulList.innerHTML += `<li>${inputValue}</li>`;
+    const container = document.getElementById("listItems");
+        container.innerHTML = "";
+        resultList.forEach((item) => {
+            buildListItem(item);
+        });
+
+    //ulList.appendChild(spanList);
+  };
 
 const buildListItem = (item) => {
     const div = document.createElement("div");
@@ -104,14 +118,21 @@ const buildListItem = (item) => {
     const check = document.createElement("input");
     check.type = "checkbox";
     check.checked = item.getCheck();
+    const deleteIcon = document.createElement("span");
+    deleteIcon.className = "material-icons";
+    deleteIcon.innerHTML = "person_remove";
     check.id = item.getId();
     check.tabIndex = 0;
-    addClickListenerToCheckbox(check);
+    addClickListenerToCheckbox(check); //this adds an event listener to the checkbox
+    //Do the same for the delete icon
+    addClickListenerToDeleteItem(deleteIcon);
+
     const label = document.createElement("label");
     label.htmlFor = item.getId();
     label.textContent = item.getItem();
     div.appendChild(check);
     div.appendChild(label);
+    div.appendChild(deleteIcon);
     const container = document.getElementById("listItems");
     //container.innerHTML = "";
     container.appendChild(div);
@@ -129,6 +150,19 @@ const addClickListenerToCheckbox = (checkbox) => {
         //}, 1000);
     });
 };
+
+const addClickListenerToDeleteItem = (material-icons, person_remove) => {
+    material-icons.addEventListener("click", (event) => {
+        //toDoList.removeItemFromList(checkbox.id);
+        toDoList.deleteToDo(material-icons.id);
+        updatePersistentData(toDoList.getList());
+    });
+};
+
+
+
+
+
 
 const getLabelText = (checkboxId) => {
     return document.getElementById(checkboxId).nextElementSibling.textContent;
