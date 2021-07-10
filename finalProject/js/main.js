@@ -222,6 +222,8 @@ const active = document.getElementById("active");
 
 const completed = document.getElementById("completed");
 
+const trimester = document.getElementById("trimester");
+
 all.addEventListener("click", () => {
     //Call render function and send a parameter
     renderList('all');
@@ -239,6 +241,12 @@ active.addEventListener("click", () => {
 completed.addEventListener("click", () => {
     //Call render function and send a parameter
     renderList('complete');
+    //Telling the render function, what to render
+});
+
+trimester.addEventListener("click", () => {
+    //Call render function and send a parameter
+    renderList('trimester');
     //Telling the render function, what to render
 });
 
