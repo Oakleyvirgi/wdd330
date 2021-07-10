@@ -93,7 +93,7 @@ const renderList = (filter = 'all') => {
     });
 };
 
-//Delete single item
+//Delete single item/name
 const deleteName = (id) => {
 
     const inputList = toDoList.getList();
@@ -124,7 +124,7 @@ const buildListItem = (item) => {
     check.id = item.getId();
     check.tabIndex = 0;
     addClickListenerToCheckbox(check); //this adds an event listener to the checkbox
-    //Do the same for the delete icon
+    //Same for the delete icon
     addClickListenerToDeleteItem(deleteIcon);
 
     const label = document.createElement("label");
@@ -147,7 +147,7 @@ const addClickListenerToCheckbox = (checkbox) => {
     });
 };
 
-const addClickListenerToDeleteItem = (material-icons) => {
+const addClickListenerToDeleteItem = (person_remove) => {
     material-icons.addEventListener("click", (event) => {
         //toDoList.removeItemFromList(checkbox.id);
         toDoList.deleteToDo(material-icons.id);
@@ -216,7 +216,7 @@ const createNewItem = (itemId, itemText) => {
 //working on filter
 const all = document.getElementById("all");
 
-const left = document.getElementById("left");
+
 
 const active = document.getElementById("active");
 
