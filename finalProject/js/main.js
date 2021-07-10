@@ -143,15 +143,11 @@ const addClickListenerToCheckbox = (checkbox) => {
         //toDoList.removeItemFromList(checkbox.id);
         toDoList.checkToDo(checkbox.id);
         updatePersistentData(toDoList.getList());
-        // const removedText = getLabelText(checkbox.id);
-        //updateScreenReaderConfirmation(removedText, "removed from list");
-        //setTimeout(() => {
-        //refreshThePage();
-        //}, 1000);
+        
     });
 };
 
-const addClickListenerToDeleteItem = (material-icons, person_remove) => {
+const addClickListenerToDeleteItem = (material-icons) => {
     material-icons.addEventListener("click", (event) => {
         //toDoList.removeItemFromList(checkbox.id);
         toDoList.deleteToDo(material-icons.id);
