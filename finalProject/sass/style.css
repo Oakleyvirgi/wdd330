@@ -222,6 +222,7 @@ section {
 
 .listContainer .item label {
   font-size: 1.1rem;
+  flex: 1 0 auto;
 }
 
 .listContainer .confirmation {
@@ -269,6 +270,8 @@ section {
   border-radius: 10px;
   padding: 0.75rem;
 }
+
+
 
 @media only screen and (min-width: 768px) {
   .myBtnContainer button {

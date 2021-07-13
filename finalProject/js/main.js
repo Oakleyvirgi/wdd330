@@ -94,21 +94,22 @@ const renderList = (filter = 'all') => {
 };
 
 //Delete single item/name
-const deleteName = (id) => {
-
-    const inputList = toDoList.getList();
-    let resultList =inputList.filter(item =>{
-        return item.id!=id;
+const deleteToDo = (id) => {
+    toDoList.removeItemFromList(id);
+    const resultList =toDoList.getList();
+    // const inputList = toDoList.getList();
+    // let resultList =inputList.filter(item =>{
+    //     return item._id !== Number(id);
 
         
-    });
+    // });
     //ulList.innerHTML += `<li>${inputValue}</li>`;
     const container = document.getElementById("listItems");
-        container.innerHTML = "";
-        resultList.forEach((item) => {
-            buildListItem(item);
-        });
-
+    container.innerHTML = "";
+    resultList.forEach((item) => {
+        buildListItem(item);
+    });
+console.log (resultList, id);
     //ulList.appendChild(spanList);
   };
 
@@ -125,7 +126,7 @@ const buildListItem = (item) => {
     check.tabIndex = 0;
     addClickListenerToCheckbox(check); //this adds an event listener to the checkbox
     //Same for the delete icon
-    addClickListenerToDeleteItem(deleteIcon);
+    addClickListenerToDeleteItem(deleteIcon, check.id);
 
     const label = document.createElement("label");
     label.htmlFor = item.getId();
@@ -147,10 +148,10 @@ const addClickListenerToCheckbox = (checkbox) => {
     });
 };
 
-const addClickListenerToDeleteItem = (person_remove) => {
-    material-icons.addEventListener("click", (event) => {
-        //toDoList.removeItemFromList(checkbox.id);
-        toDoList.deleteToDo(material-icons.id);
+const addClickListenerToDeleteItem = (deleteIcon, id) => {
+    deleteIcon.addEventListener("click", (event) => {
+        // toDoList.removeItemFromList(checkbox.id);
+        deleteToDo(id);
         updatePersistentData(toDoList.getList());
     });
 };
