@@ -5,13 +5,9 @@ const scriptures = await fetch("message.json")
     .then(response => response.json());
 const toDoList = new ToDoList();
 
-//Launch app
-document.addEventListener("readystatechange", (event) => {
-    if (event.target.readyState === "complete") {
-        console.log('init called')
-        initApp();
-    }
-});
+
+
+
 
 const initApp = () => {
     //Add listeners
@@ -301,3 +297,13 @@ document.getElementById("scripture").innerHTML = scripture[0].reference + "<br><
 
 // Get today's date
 //const today = new Date();
+
+// document.addEventListener("readystatechange", (event) => {
+    //     if (event.target.readyState === "complete") {
+        //         console.log('init called')
+        //     }
+        // });
+
+
+        //Launch app
+initApp();
