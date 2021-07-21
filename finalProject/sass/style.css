@@ -21,16 +21,17 @@ html {
 }
 
 #scripture {
-  margin-top:5%;
+  /*margin-top:5%;
   margin-bottom:5%;
   margin-right: 25%;
-  margin-left: 25%;
+  margin-left: 25%;*/
   text-align: center;
   font-size: xx-large;
   font-weight: bold;
-  color:#0e1a0e;
-  border-radius:2px;
-  
+  color: #0e1a0e;
+  border-radius: 10px;
+  background-color: #f2f2f288;
+
 }
 
 /*#scripture:hover {
@@ -49,6 +50,7 @@ transition: transform .5s ease;
   body {
     font-size: 22px;
   }
+
   /*#scripture {
     margin-top:5%;
     margin-bottom:5%;
@@ -282,6 +284,7 @@ section {
     background-image: url("/finalProject/images/test2.jpg");
     background-size: 100%;
   }
+
   /*#scripture {
     margin-top:5%;
     margin-bottom:5%;

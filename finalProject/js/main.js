@@ -97,11 +97,12 @@ const renderList = (filter = 'all') => {
         const nameCount = list.filter((item) => (item._check)).length;
         //console.log(nameCount);
         document.getElementsByClassName('listContainer')[0].innerText = "We had " + nameCount + " girls present on " + todayFormatted;
+        alert("Thank you for taking the attendance! Have a great week!");
         return;
 
     }
 
-    
+
 
     const container = document.getElementById("listItems");
     container.innerHTML = "";
@@ -247,7 +248,7 @@ all.addEventListener("click", () => {
     const listContainer = document.getElementsByClassName('listContainer')[0];
     listContainer.classList.remove('hideDelete');
     //Call render function and send a parameter
-    renderList('all');    
+    renderList('all');
     //Telling the render function, what to render
 });
 
@@ -257,7 +258,7 @@ active.addEventListener("click", () => {
     listContainer.classList.add('hideDelete');
     //Call render function and send a parameter
     renderList('active');
-        //Telling the render function, what to render
+    //Telling the render function, what to render
 });
 
 
@@ -266,7 +267,7 @@ completed.addEventListener("click", () => {
     listContainer.classList.add('hideDelete');
     //Call render function and send a parameter
     renderList('complete');
-    
+
     //Telling the render function, what to render
 });
 

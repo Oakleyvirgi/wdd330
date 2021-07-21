@@ -1,4 +1,4 @@
-import ToDoList from './todolist.js';//"./todolist.js"
+import ToDoList from './todolist.js'; //"./todolist.js"
 import ToDoItem from './todoitem.js';
 
 const toDoList = new ToDoList();
@@ -74,16 +74,14 @@ const renderList = (filter = 'all') => {
     let newRender = [];
     if (filter === "all") {
         newRender = list;
-    } 
-    else if (filter === 'active'){
+    } else if (filter === 'active') {
         console.log("active");
-        newRender = list.filter((item) =>  !item._check) ;
-    }
-    else if (filter === "complete") {
+        newRender = list.filter((item) => !item._check);
+    } else if (filter === "complete") {
         console.log("complete");
         newRender = list.filter((item) => (item._check));
     }
-    
+
     //if (filter === 'active') {
     //newRender = list.filter((item) => ); //filter
     //console.log(list);    } //else if (filter === 'left'){
@@ -211,4 +209,3 @@ completed.addEventListener("click", () => {
     renderList('complete');
     //Telling the render function, what to render
 });
-

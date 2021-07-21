@@ -1,64 +1,63 @@
 {
-    "message": [
-      {
-        "reference": "Moroni 10:23",
-        "text": "And Christ truly said unto our fathers: aIf ye have faith ye can do all things which are expedient unto me.",
-        "id": 1
-      },
-      {
-        "reference": "2 Nephi 2:25",
-        "text": "Adam fell that men might be; and men care, that they might have joy.",
-        "id": 2
-      },
-      {
-        "reference": "1 Nephi 20:10",
-        "text": "For, behold, I have refined thee, I have chosen thee in the furnace of affliction.",
-        "id": 3
-      },
-      {
-        "reference": "Luke 12:34",
-        "text": "For where your treasure is, there will your heart be also.",
-        "id": 4
-      },
-      {
-        "reference": "James 1:3",
-        "text": "Knowing this, that the trying of your faith worketh patience.",
-        "id": 5
-      },
-      {
-        "reference": "Mosiah 8:18",
-        "text": "For I know that God is not a partial God, neither a changeable being; but he is unchangeable from ball eternity to all eternity.",
-        "id": 6
-      },
-      {
-        "reference": "1 Timothy 4:12",
-        "text": "Let no man despise thy youth; but be thou an example of the believers, in word, in conversation, in charity, in spirit, in faith, in purity.",
-        "id": 7
-      },
-      {
-        "reference": "Moroni 7:25",
-        "text": "Wherefore, by the ministering of angels, and by every word which proceeded forth out of the mouth of God, men began to exercise faith in Christ; and thus by faith, they did lay hold upon every good thing; and thus it was until the coming of Christ.",
-        "id": 8
-      },
-      {
-        "reference": "Moroni 10:20",
-        "text": "Wherefore, there must be faith; and if there must be faith there must also be hope; and if there must be hope there must also be charity.",
-        "id": 9
-      },
-      {
-        "reference": "Alma 7:11",
-        "text": "And he shall go forth, suffering pains and afflictions and temptations of every kind; and this that the word might be fulfilled which saith he will take upon him the pains and the sicknesses of his people.",
-        "id": 10
-      },
-      {
-        "reference": "Ether 12:27",
-        "text": "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble; and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them.",
-        "id": 11
-      },
-      {
-        "reference": "Mormon 5:23",
-        "text": "Know ye not that ye are in the hands of God? Know ye not that he hath all power, and at his great command the earth shall be rolled together as a scroll?",
-        "id": 12
-      }
-    ]
-  }
+  "message": [{
+      "reference": "Moroni 10:23",
+      "text": "And Christ truly said unto our fathers: aIf ye have faith ye can do all things which are expedient unto me.",
+      "id": 1
+    },
+    {
+      "reference": "2 Nephi 2:25",
+      "text": "Adam fell that men might be; and men care, that they might have joy.",
+      "id": 2
+    },
+    {
+      "reference": "1 Nephi 20:10",
+      "text": "For, behold, I have refined thee, I have chosen thee in the furnace of affliction.",
+      "id": 3
+    },
+    {
+      "reference": "Luke 12:34",
+      "text": "For where your treasure is, there will your heart be also.",
+      "id": 4
+    },
+    {
+      "reference": "James 1:3",
+      "text": "Knowing this, that the trying of your faith worketh patience.",
+      "id": 5
+    },
+    {
+      "reference": "Mosiah 8:18",
+      "text": "For I know that God is not a partial God, neither a changeable being; but he is unchangeable from ball eternity to all eternity.",
+      "id": 6
+    },
+    {
+      "reference": "1 Timothy 4:12",
+      "text": "Let no man despise thy youth; but be thou an example of the believers, in word, in conversation, in charity, in spirit, in faith, in purity.",
+      "id": 7
+    },
+    {
+      "reference": "Moroni 7:25",
+      "text": "Wherefore, by the ministering of angels, and by every word which proceeded forth out of the mouth of God, men began to exercise faith in Christ; and thus by faith, they did lay hold upon every good thing; and thus it was until the coming of Christ.",
+      "id": 8
+    },
+    {
+      "reference": "Moroni 10:20",
+      "text": "Wherefore, there must be faith; and if there must be faith there must also be hope; and if there must be hope there must also be charity.",
+      "id": 9
+    },
+    {
+      "reference": "Alma 7:11",
+      "text": "And he shall go forth, suffering pains and afflictions and temptations of every kind; and this that the word might be fulfilled which saith he will take upon him the pains and the sicknesses of his people.",
+      "id": 10
+    },
+    {
+      "reference": "Ether 12:27",
+      "text": "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble; and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them.",
+      "id": 11
+    },
+    {
+      "reference": "Mormon 5:23",
+      "text": "Know ye not that ye are in the hands of God? Know ye not that he hath all power, and at his great command the earth shall be rolled together as a scroll?",
+      "id": 12
+    }
+  ]
+}

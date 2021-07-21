@@ -16,6 +16,7 @@ body {
 
 
 @media only screen and (min-width: 768px) {
+
 	html,
 	body {
 		font-size: 22px;
@@ -165,7 +166,7 @@ section {
 	margin-right: 1.5rem;
 }
 
-.listContainer .item input[type="checkbox"]:focus + label {
+.listContainer .item input[type="checkbox"]:focus+label {
 	text-decoration: underline;
 }
 
@@ -224,4 +225,5 @@ section {
 		font-size: 1.5rem;
 	}
 }
+
 /*# sourceMappingURL=style.css.map */

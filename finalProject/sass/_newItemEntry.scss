@@ -3,11 +3,11 @@
     top: 0;
     margin-bottom: 1rem;
     padding: 0.75rem;
-    
+
     form {
-        display:flex;
+        display: flex;
         justify-content: space-between;
-        
+
         label {
             position: absolute;
             left: -10000px;
@@ -16,7 +16,7 @@
         input[type="text"] {
             width: 80%;
             font-size: 1.25rem;
-            border:2 px solid $textbox-bordercolor;
+            border: 2 px solid $textbox-bordercolor;
             border-radius: 10px;
             padding: 0.75rem;
             outline: none;
@@ -31,6 +31,7 @@
             font-size: 1.25rem;
             background-color: $add-button-color;
             padding: 0.75rem;
+
             @include mq(768px) {
                 font-size: 1.5rem;
             }
