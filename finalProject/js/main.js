@@ -77,10 +77,10 @@ const renderList = (filter = 'all') => {
     if (filter === "all") {
         newRender = list;
     } else if (filter === 'active') {
-        console.log("active");
+        //console.log("active");
         newRender = list.filter((item) => !item._check);
     } else if (filter === "complete") {
-        console.log("complete");
+        //console.log("complete");
         newRender = list.filter((item) => (item._check));
 
 
@@ -92,10 +92,10 @@ const renderList = (filter = 'all') => {
 
         const todayFormatted = mm + '/' + dd + '/' + yyyy;
         //document.write(todayFormatted);
-        console.log(todayFormatted);
-        console.log("report");
+        //console.log(todayFormatted);
+        //console.log("report");
         const nameCount = list.filter((item) => (item._check)).length;
-        //console.log(nameCount);
+        ////console.log(nameCount);
         document.getElementsByClassName('listContainer')[0].innerText = "We had " + nameCount + " girls present on " + todayFormatted;
         alert("Thank you for taking the attendance! Have a great week!");
         return;
@@ -128,7 +128,7 @@ const deleteToDo = (id) => {
     resultList.forEach((item) => {
         buildListItem(item);
     });
-    console.log(resultList, id);
+    //console.log(resultList, id);
     //ulList.appendChild(spanList);
 };
 
@@ -253,7 +253,7 @@ all.addEventListener("click", () => {
 });
 
 active.addEventListener("click", () => {
-    console.log("click");
+    //console.log("click");
     const listContainer = document.getElementsByClassName('listContainer')[0];
     listContainer.classList.add('hideDelete');
     //Call render function and send a parameter
@@ -285,7 +285,7 @@ const currentMonth = new Date().getMonth() + 1;
 const scripture = scriptures.message.filter(item => {
     return currentMonth == item.id;
 })
-console.log(scripture);
+//console.log(scripture);
 
 //document.getElementById("scripture").addEventListener("load", (scripture[0].reference + scripture[0].text));
 
