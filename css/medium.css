@@ -1,0 +1,15 @@
+@media only screen and (min-width: 32.5em) {
+    .portrait {
+        float: right;
+        border-radius: 10px;
+        margin-top: 7px;
+        margin-right: 10px;
+        box-shadow: 2px 2px 2px rgb(180, 176, 176);
+        width: 195px;
+    }
+
+    body {
+        padding: 5px 210px;
+        font-size: 18px;
+    }
+}

@@ -1,7 +1,15 @@
 .listContainer {
     min-height: 60vh;
-    padding:0.75rem;
+    padding: 0.75rem;
     margin-bottom: 12px;
+
+    &.hideDelete {
+        .delete {
+            display: none !important;
+            background-color: red;
+        }
+    }
+
 
     .listTitle {
         display: flex;
@@ -9,28 +17,29 @@
         align-items: flex-end;
 
 
-        button{
+        button {
             font-size: 1rem;
             background-color: $clear-button-color;
             padding: 0 0.1rem;
             margin-bottom: 0.5rem;
-            @include mq(768px){
+
+            @include mq(768px) {
                 padding: 0 0.5rem;
             }
         }
 
         hr {
             width: 100%;
-        } 
+        }
     }
 
-    .item{
+    .item {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         padding-top: 1rem;
 
-        input[type="checkbox"]{
+        input[type="checkbox"] {
             text-align: center;
             width: 2.5rem;
             min-width: 48px;
@@ -40,9 +49,10 @@
             margin-right: 1.5rem;
         }
 
-        input[type="checkbox"]:focus + label {
+        input[type="checkbox"]:focus+label {
             text-decoration: underline;
         }
+
         label {
             font-size: 1.1rem;
         }
@@ -52,6 +62,6 @@
     .confirmation {
         position: absolute;
         left: -10000px;
-        
+
     }
 }

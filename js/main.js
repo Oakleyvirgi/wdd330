@@ -44,3 +44,5 @@ const links = [
     li.innerHTML = listHtml;
     weeklist.appendChild(li);
   });
+
+  document.getElementById('last_date_modified').innerHTML = document.lastModified;

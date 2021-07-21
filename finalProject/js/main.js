@@ -82,9 +82,26 @@ const renderList = (filter = 'all') => {
     } else if (filter === "complete") {
         console.log("complete");
         newRender = list.filter((item) => (item._check));
+
+
+    } else if (filter === "report") {
+        const today = new Date();
+        const dd = String(today.getDate()).padStart(2, '0');
+        const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        const yyyy = today.getFullYear();
+
+        const todayFormatted = mm + '/' + dd + '/' + yyyy;
+        //document.write(todayFormatted);
+        console.log(todayFormatted);
+        console.log("report");
+        const nameCount = list.filter((item) => (item._check)).length;
+        //console.log(nameCount);
+        document.getElementsByClassName('listContainer')[0].innerText = "We had " + nameCount + " girls present on " + todayFormatted;
+        return;
+
     }
 
-
+    
 
     const container = document.getElementById("listItems");
     container.innerHTML = "";
@@ -93,15 +110,16 @@ const renderList = (filter = 'all') => {
     });
 };
 
+
 //Delete single item/name
 const deleteToDo = (id) => {
     toDoList.removeItemFromList(id);
-    const resultList =toDoList.getList();
+    const resultList = toDoList.getList();
     // const inputList = toDoList.getList();
     // let resultList =inputList.filter(item =>{
     //     return item._id !== Number(id);
 
-        
+
     // });
     //ulList.innerHTML += `<li>${inputValue}</li>`;
     const container = document.getElementById("listItems");
@@ -109,9 +127,9 @@ const deleteToDo = (id) => {
     resultList.forEach((item) => {
         buildListItem(item);
     });
-console.log (resultList, id);
+    console.log(resultList, id);
     //ulList.appendChild(spanList);
-  };
+};
 
 const buildListItem = (item) => {
     const div = document.createElement("div");
@@ -120,7 +138,7 @@ const buildListItem = (item) => {
     check.type = "checkbox";
     check.checked = item.getCheck();
     const deleteIcon = document.createElement("span");
-    deleteIcon.className = "material-icons";
+    deleteIcon.className = "material-icons delete";
     deleteIcon.innerHTML = "person_remove";
     check.id = item.getId();
     check.tabIndex = 0;
@@ -144,7 +162,7 @@ const addClickListenerToCheckbox = (checkbox) => {
         //toDoList.removeItemFromList(checkbox.id);
         toDoList.checkToDo(checkbox.id);
         updatePersistentData(toDoList.getList());
-        
+
     });
 };
 
@@ -223,45 +241,60 @@ const active = document.getElementById("active");
 
 const completed = document.getElementById("completed");
 
-const trimester = document.getElementById("trimester");
+const report = document.getElementById("report");
 
 all.addEventListener("click", () => {
+    const listContainer = document.getElementsByClassName('listContainer')[0];
+    listContainer.classList.remove('hideDelete');
     //Call render function and send a parameter
-    renderList('all');
+    renderList('all');    
     //Telling the render function, what to render
 });
 
 active.addEventListener("click", () => {
     console.log("click");
+    const listContainer = document.getElementsByClassName('listContainer')[0];
+    listContainer.classList.add('hideDelete');
     //Call render function and send a parameter
     renderList('active');
-    //Telling the render function, what to render
+        //Telling the render function, what to render
 });
 
 
 completed.addEventListener("click", () => {
+    const listContainer = document.getElementsByClassName('listContainer')[0];
+    listContainer.classList.add('hideDelete');
     //Call render function and send a parameter
     renderList('complete');
+    
     //Telling the render function, what to render
 });
 
-trimester.addEventListener("click", () => {
+report.addEventListener("click", () => {
     //Call render function and send a parameter
-    renderList('trimester');
+    renderList('report');
     //Telling the render function, what to render
+    const audio = new Audio('http://media2.ldscdn.org/assets/youth/2020-youth-theme-publishing/2020-01-1120-i-will-go-and-do-female-version-256k-eng.mp3?download=true?download=true');
+    audio.play();
 });
 
 
 //Display message
 const currentMonth = new Date().getMonth() + 1;
-const scripture = scriptures.message.filter (item => {
+const scripture = scriptures.message.filter(item => {
     return currentMonth == item.id;
 })
 console.log(scripture);
 
 //document.getElementById("scripture").addEventListener("load", (scripture[0].reference + scripture[0].text));
 
-document.getElementById("scripture").innerHTML = scripture[0].reference +"<br><br> "+ scripture[0].text;
+document.getElementById("scripture").innerHTML = scripture[0].reference + "<br><br> " + scripture[0].text;
 
 
 //document.getElementById("body").addEventListener("load", makeYMD);
+
+//const audio = new Audio('http://media2.ldscdn.org/assets/youth/2020-youth-theme-publishing/2020-01-1120-i-will-go-and-do-female-version-256k-eng.mp3?download=true?download=true');
+//audio.play();
+
+// Get today's date
+//const today = new Date();
