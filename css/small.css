@@ -82,6 +82,16 @@ nav a {
 	color: black;
 }
 
+li {
+	color:rgb(53, 52, 52);
+}
+
+a{
+	color: black;
+	padding-bottom: 20px;
+	text-decoration: none;
+}
+
 .icons {
 	list-style-type: none;
 }
