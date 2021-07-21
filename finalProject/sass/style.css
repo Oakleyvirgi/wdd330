@@ -125,7 +125,7 @@ section {
 .newItemEntry form input[type="text"] {
   width: 80%;
   font-size: 1.25rem;
-  border: 2 px solid lightgray;
+  border: 2px solid lightgray;
   border-radius: 10px;
   padding: 0.75rem;
   outline: none;
@@ -254,7 +254,7 @@ section {
 .myBtnContainer input[type="text"] {
   width: 80%;
   font-size: 1.25rem;
-  border: 2 px solid lightgray;
+  border: 2px solid lightgray;
   border-radius: 10px;
   padding: 0.75rem;
   outline: none;
