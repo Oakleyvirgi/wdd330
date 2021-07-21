@@ -281,7 +281,7 @@ section {
   }
 
   html {
-    background-image: url("/finalProject/images/test2.jpg");
+    background-image: url("../images/test2.jpg");
     background-size: 100%;
   }
 
