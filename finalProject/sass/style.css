@@ -15,7 +15,7 @@ body {
 }
 
 html {
-  background-image: url("/finalProject/images/test2.jpg");
+  background-image: url("../images/test2.jpg");
   background-size: 100%;
 
 }
@@ -42,7 +42,7 @@ transition: transform .5s ease;
 @media only screen and (min-width: 768px) {
 
   html {
-    background-image: url("/finalProject/images/test2.jpg");
+    background-image: url("../images/test2.jpg");
     background-size: 100%;
   }
 
@@ -149,7 +149,7 @@ section {
   }
 
   html {
-    background-image: url("/finalProject/images/test2.jpg");
+    background-image: url("../images/test2.jpg");
     background-size: 100%;
   }
 
@@ -186,7 +186,7 @@ section {
   }
 
   html {
-    background-image: url("/finalProject/images/test2.jpg");
+    background-image: url("../images/test2.jpg");
     background-size: 100%;
   }
 }
