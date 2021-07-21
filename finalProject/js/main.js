@@ -8,6 +8,7 @@ const toDoList = new ToDoList();
 //Launch app
 document.addEventListener("readystatechange", (event) => {
     if (event.target.readyState === "complete") {
+        console.log('init called')
         initApp();
     }
 });
@@ -195,6 +196,7 @@ const clearItemEntryField = () => {
 const setFocusOnItemEntry = () => {
     document.getElementById("newItem").focus();
 };
+
 
 const processSubmission = () => {
     const newEntryText = getNewEntry();
