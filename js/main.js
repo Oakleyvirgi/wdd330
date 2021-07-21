@@ -12,7 +12,7 @@ const links = [
     {list: ["Week5 Notes", "week5/notes05.html", "Team Assignment", "week5/code05.html"],
     },
   
-    {list: ["Week6 TODO List", "todo_list/index.html"],
+    {list: ["TODO List", "todo_list/index.html"],
     },
   
     {list: ["Week7 Notes", "week7/notes07.html", "Team Assignment", "week7/index.html"],
@@ -28,6 +28,9 @@ const links = [
     },
 
     {list: ["Week11 Team Assignment", "week11/week11.html"],
+    },
+
+    {list: ["Young Women Attendance Final Project", "finalProject/index.html"],
     },
   ];
   
